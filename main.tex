@@ -1,0 +1,140 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage[nohead]{geometry}
+\usepackage[singlespacing]{setspace}
+\usepackage[bottom]{footmisc}
+\usepackage{indentfirst}
+\usepackage{endnotes}
+\usepackage{graphicx} % allows inclusion of graphics files produced by other applications
+\usepackage[bookmarks=false, pdfstartview={FitH}, colorlinks=true, hidelinks, urlbordercolor={1 1 1}]{hyperref} % allows usage of internet links and email addresses
+\usepackage{rotating} % allows to rotate pictures and tables
+\usepackage{caption}	% allows captions for pictures and tables
+\usepackage[round]{natbib}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\geometry{left=1.0in,right=1.0in,top=1.00in,bottom=1.0in} % set margins
+
+
+\begin{document}
+
+\title{\textbf{The Monastry, the Villa and the value of commitment}}
+\author{Domenico Rossignoli, Federico Trombetta\thanks{F.Trombetta@warwick.ac.uk. Department of Economics, The University of Warwick. ESRC support is gratefully acknowledged.}
+				}
+
+
+\date{\today}
+
+
+\maketitle
+
+\renewcommand{\baselinestretch}{1.5}\small\normalsize
+
+\begin{abstract}
+This model studies the different types of interactions between a principal (The Abate of the Monastry or the Lord of the Villa) and an agent (a representative farmer) allowed by a differentiated ability of commitment. The trade off is between the higher flexibility of the Lord, who is not constrained to honor his words, and the higher reliability of the Abate, whose behaviour is constrained by monastic rules. We model this interactions in a standard contract theory framework looking for the optimal contract from the point of view of the Principal and studying the difference between the two.
+\end{abstract}
+
+\textbf{Keywords}: \\
+\textbf{JEL}:
+
+\renewcommand{\baselinestretch}{1.5}\small\normalsize
+
+
+\section{Introduction}\label{introduction}
+
+Introduction here
+
+\section{The model}
+
+\subsection{General framework}
+Irrespective of the type of principal we are considering (i.e. the Abate or the Lord), we look at the optimal contract from his point of view. We assume that the principal is able to offer a wage schedule conditional on the realization of a certain outcome, that depends (imperfectly) from the costly effort decision of the agent. The difference between the two principals is that the Abate is fully committed to honour the contract, while the Lord will pay the agent only if it is in his best interest to do so.\\
+We assume that the principal is risk neutral while the agent is risk averse, so that $u_{a}=u(w_{i})-c(a)$, where $w_{i}$ is the received wage and $c(a)$ is the cost of effort. $u(.)$ is increasing and concave.\\
+The timing of the game is as follows:
+
+\begin{enumerate}
+	\item In period 1 the principal offers to the agent a wage schedule $w = \lbrace w_{L},w_{H} \rbrace$, to be paid in period 2 conditional on the realization of the outcome, $y=\lbrace y_{L},y_{H} \rbrace$.
+	\item The agent chooses whether to accept or to reject the contract (in this case, her outside option is normalized to 0) and chooses the effort level $a \in R^{+}$ paying a cost of effort $c(a)$ such that $c'(a)>0$, $c''(a)>0$, $c(0)=0$.
+	\item The outcome is realized. It is common knowledge that $Pr\left(y=y_{H} | a\right):=p\left(a\right)$ is increasing and concave in $a$, with $p\left(0\right)=0$ and $p\left(\infty\right)=1$. Period 1 ends.
+	\item In period 2, $\beta$ is realized and the principal decides whether he wants to pay the wage specified in the contract given the output produced. If he pays the wage, his utility for this period is $-w_{i}+\beta V$. If he does not pay, his utility for period 2 is 0.
+\end{enumerate}
+
+\subsection{The Villa}
+In order to capture the different commitment ability, we assume the existence of random shock to the discount factor of the principal, when he is a Lord. Since the payment happens after the delivery of the outcome, the principal could keep it without paying the agent, but this would imply losing every future production opportunity. In order to capture the importance of the future in a two-periods game we assume that the value of future interactions is exogenously given by $V$, multiplied by a discount factor $\beta$ that may take different values once period 2 is reached. In particular, and for simplicity, we assume that $\beta \in \lbrace 1, \tilde{\beta}, 0 \rbrace$ with probability $\gamma$, $\delta$ and $(1-\gamma-\delta)$ respectively.\\
+As a consequence, we assume that the principal is going to pay both values of wages when $\beta=1$, only low wages when $\beta=\tilde{\beta}$ and none of the two when $\beta=0$. The interpretation of this would be the presence of a war, that the Lord needs to fight distorting resources from paying the farmers. Depending on the urgency of the crisis, he may prefer his contingent survival to future interactions with the farmers.\\
+As a consequence, the incentive compatibility constraint for the agent is
+
+\begin{equation}\label{ICvilla}
+a= \text{argmax} \lbrace p\left(a \right)\left[\gamma u \left( w_{H}\right)\right]+\left( 1-p\left( a \right)\right)\left[\left(\gamma+\delta\right)u\left(w_{L}\right)\right]-c\left(a\right)   \rbrace
+\end{equation}
+
+while the participation constraint is given by
+
+\begin{equation}\label{IRvilla}
+p\left( a \right)\left[\gamma u\left(w_{H}\right)\right]+\left(1-p\left( a \right)\right)\left[\left(\gamma+\delta\right)u\left(w_{L}\right)\right]-c\left(a\right) \geq 0  
+\end{equation}
+
+As a consequence, the principal's problem is
+
+\begin{multline}\label{PrincipalVilla}
+\max_{\left(a, w_{H}, w_{L}\right)} p\left(a\right)y_{H} + \left(1-p\left(a\right)\right)y_{L}+\gamma\left[p\left(a\right)\left(-w_{H}+V\right)+\left(1-p\left(a\right)\right)\left(-w_{L}+V\right)\right]+ \\ +\delta\left[\left(1-p\left(a\right)\right)\left(-w_{L}+\tilde{\beta}V\right)\right]
+\end{multline}
+
+subject to (\ref{ICvilla}) and (\ref{IRvilla}).
+
+\subsection{The Monastry}
+In a Monastry, rules are clearly established and the Abate is constrained by that. Formally, the problem is the same as the Villa's one, with the only difference that now the payment has to happen irrespective of the value of $\beta$.
+Hence, now the ICC is
+
+\begin{equation}\label{ICmonks}
+a= \text{argmax} \lbrace p\left(a \right)\left[ u \left( w_{H}\right)\right]+\left( 1-p\left( a \right)\right)\left[u\left(w_{L}\right)\right]-c\left(a\right)   \rbrace
+\end{equation}
+
+
+while the participation constraint is given by
+
+\begin{equation}\label{IRmonks}
+p\left( a \right)\left[u\left(w_{H}\right)\right]+\left(1-p\left( a \right)\right)\left[u\left(w_{L}\right)\right]-c\left(a\right) \geq 0  
+\end{equation}
+
+Finally, the maximization problem for the principal is the following:
+
+\begin{equation}\label{Principalmonks}
+\max_{\left(a, w_{H}, w_{L}\right)} p\left(a\right)\left[ y_{H} - w_{H} \right] + \left(1-p\left(a\right)\right)\left[ y_{L} - w_{L} \right]+\gamma V + \delta \tilde{\beta}V
+\end{equation}
+
+subject to (\ref{ICmonks}) and (\ref{IRmonks}).
+
+\section{Commenti}
+
+Questo e' un possibile setting per il modello. Quello che penso/spero sia ottenibile da qui e' una spiegazione del perche' i prezzi di mercato dei monasteri possono essere piu' bassi (il che si otterrebbe se, a parita' di effort, questi potessero pagare meno salari, o ottenere un effort maggiore con gli stessi salari).
+Non ho ancora risolto il modello perche' non e' immediatissimo, quindi volevo prima la tua opinione sul setting.
+Ci sono due cose che non mi convincono del tutto:
+\begin{itemize}
+\item la circolarita' dell'argomentazione implicita qui dentro: in pratica si dice che, siccome il monastero e' constrained, allora puo' ottenere risultati migliori, alloa puo' fare prezzi piu' bassi. Ma i prezzi piu' bassi sono un pezzo di regola, i.e. del constraint, piu' che un risultato della stessa. Girando un po' la frittata si potrebbe dire che questo modello spiega come il prezzo piu' basso sia possibile \textit{esattamente perche'} c'e' una regola che vincola l'arbitrio del principal. 
+\item il risultato (se viene quello che penso debba venire) e' un po' ovvio: in pratica diciamo che se c'e' commitment power allora sei piu' efficiente / ottieni risultati migliori. Il che probabilmente e' una cosa vera, ma non e' controintuitiva. Il che rende il modello in qualche modo "ovvio". Di conseguenza, andrebbe bene se fosse abbinato a un qualche tipo di analisi empirica, ma non credo sarebbe sufficiente da reggersi in piedi da solo.
+
+\end{itemize}
+
+\end{document}
